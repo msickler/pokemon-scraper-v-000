@@ -20,11 +20,12 @@ class Pokemon
   end
 
   def alter_hp(hp, db)
-    db.execute("UPDATE pokemon SET hp = (?) WHERE id = (?)", hp, id).flatten[0]
+    db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", hp, id).flatten[0]
   end
 
-  def hp
-    db.execute("SELECT hp FROM pokemon WHERE id = (?)", id).flatten[0]
-  end
-
-end
+ def hp
+   db.execute("SELECT hp FROM pokemon WHERE id = ?", id).flatten[0]
+ end
+ 
+ end 
+ 
