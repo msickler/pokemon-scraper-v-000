@@ -26,6 +26,6 @@ class Pokemon
  def hp
    db.execute("SELECT hp FROM pokemon WHERE id = ?", id).flatten[0]
  end
- 
- end 
+
+ end
  
